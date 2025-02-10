@@ -29,7 +29,7 @@
                     <p>Once your order is shipped, you will receive a confirmation email with tracking information. You can also track your order status by logging into your account on our website.</p>
 
                     <h4 class="text-primary mt-4">4. Shipping Promotions</h4>
-                    <p>During promotional periods, such as our <strong>New Year Mega Sale</strong>, enjoy exclusive discounts across all categories, plus <strong>free shipping</strong> on orders over <strong>a specific amount</strong>.</p>
+                    <p>During promotional periods, such as our <strong>New Year Mega Sale</strong>, enjoy exclusive discounts across all categories, plus <strong>free shipping</strong> on orders over <strong>a specific amountgit</strong>.</p>
 
                     <h4 class="text-primary mt-4">5. Delivery Issues</h4>
                     <ul class="list-group list-group-flush">
