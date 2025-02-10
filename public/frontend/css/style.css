@@ -1,0 +1,575 @@
+/* css for banner slider start */
+/* Slider Container */
+.slider-container {
+    width: 100%;
+   
+    overflow: hidden; /* Prevent unwanted scrollbars */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:768px){
+  .slider-container{
+    height: 100%;
+  }
+}
+
+/* Slick Slider */
+.slick-slider {
+    width: 100%;
+    height:100%;
+}
+
+.slick-slide {
+    display: flex !important; 
+    justify-content: center;
+    align-items: center;
+    height: 400px;  
+}
+
+.slick-slide img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;  
+}
+
+/* Mobile-Specific Adjustments */
+@media only screen and (max-width: 575px) {
+    .slick-slide img {
+
+        object-fit: cover; /* Prevent cropping on smaller screens */
+    }
+}
+
+
+
+/* css for banner slider end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* css for best selling products card start */
+
+
+
+.product-box {
+    position: relative;
+    background: #fff;
+    
+    padding: 10px;
+    /* margin-bottom: 30px; */
+    transition: all 0.3s ease;
+}
+
+.product-box:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Update Product Image styles */
+.product-image {
+    position: relative;
+    margin-bottom: 15px;
+    height: 0;
+    padding-bottom: 125%; /* 4:5 aspect ratio */
+    overflow: hidden;
+}
+
+.product-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+/* Move quickview button styles here */
+.quickview-btn {
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    /* background: #fff; */
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+}
+
+
+.product-box:hover .quickview-btn {
+    opacity: 0;
+    transform: translateX(0);
+}
+
+/* Update plus button styles */
+.plus-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 25px;
+    height: 25px;
+    
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.product-box:hover .plus-btn {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+.plus-btn-wrapper {
+    position: relative;
+}
+
+.plus-btn {
+    position: relative;
+    width: 20px;
+    height: 20px;
+   
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 2;
+}
+
+
+.plus-btn .hover-text {
+    position: absolute;
+    
+    color: white;
+    font-size: 14px;
+    opacity: 1;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.plus-btn:hover {
+    width: 70px;
+    background: #F69B09;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .quickview-btn, 
+    .plus-btn {
+        opacity: 0 !important; /* Force visibility on small screens */
+        transform: translateX(0); /* Reset position */
+    }
+}
+/* Update image dots styles */
+.image-dots {
+    display: flex;
+   
+    gap: 5px;
+    justify-content: flex-end;
+    /* margin-top: 10px; */
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #333;
+}
+
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #333;
+    color: #fff;
+    padding: 5px 12px;
+    font-size: 12px;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+/* Wishlist Button - Right Top */
+.wishlist-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.wishlist-btn i {
+    font-size: 16px;
+    color: #333;
+}
+
+.wishlist-btn.active i {
+    color: red;
+}
+
+/* Update z-index for all interactive elements */
+.product-badge,
+.wishlist-btn,
+
+.plus-btn {
+    z-index: 2;
+}
+
+/* Add missing icon styles */
+.wishlist-btn i,
+/* .quickview-btn i, */
+.plus-btn i {
+    font-size: 16px;
+    color: #333;
+}
+.section-title {
+
+    text-align: center;
+}
+
+@media only screen and (min-width:320px) and (max-width:575px){
+  
+.product-image img{
+    width:100%;
+    height: 100%;
+}  
+.product-badge{
+    font-size: 8px;
+}
+
+}
+
+
+
+
+
+/* start style for amenities part */
+
+
+
+/* Icon styling */
+.home_delivery i,
+.trends i,
+.quality i,
+.caring_support i {
+    color: #6c757d; /* Muted gray color */
+}
+
+/* Centering content */
+.home_delivery,
+.trends,
+.quality,
+.caring_support {
+    padding: 20px 10px;
+    text-align: center;
+}
+
+h4 {
+    margin-top: 15px; /* Spacing between icon and title */
+    font-weight: 600; /* Bold text */
+}
+
+p {
+    font-size: 14px; /* Slightly smaller muted text */
+}
+
+/* end style for amenities part */
+
+
+
+/* General Side Menu Styles */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -50%; /* Initially hidden outside of view */
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    overflow-y: auto;
+    transition: right 0.5s ease; /* Smooth sliding effect */
+    padding: 20px;
+}
+@media (max-width:768px){
+
+    .side-menu{
+
+        right: -90%; /* Initially hidden outside of view */
+         width: 90%;
+    }
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Button Styles */
+ .plus-btn {
+    position: absolute;
+    z-index: 999;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.plus-btn {
+    bottom: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+}
+
+/* Side Menu Active State */
+/* .side-menu.active {
+    right: 0; /* Slide into view 
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* start footer style */
+
+
+.site-footer {
+    background: #fff;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.newsletter-form .form-control {
+    height: 45px;
+}
+
+/* Footer Headings */
+.footer-heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #333;
+}
+
+/* Contact Info */
+.contact-info p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    color: #333;
+    width: 20px;
+}
+.copyright-bar {
+    background-color: #f8f9fa;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.copyright-bar a {
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.copyright-bar a:hover {
+    color: #333;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    /* width: 35px;
+    height: 35px; */
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.social-link  i {
+	border: 1px solid rgba(0,0,0,.2);
+	/* padding: 10px; */
+	border-radius: 50%;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+    margin: 0px 5px 0px 0px;
+}
+
+.social-link:hover {
+    
+    color: #b7360e;
+}
+
+/* Payment Methods */
+.payment-methods img {
+    max-width: 200px;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .newsletter-section {
+        text-align: center;
+    }
+
+    .newsletter-form {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .footer-heading {
+        margin-top: 30px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .payment-methods {
+        text-align: center;
+    }
+}
+
+
+/* end footer style */
